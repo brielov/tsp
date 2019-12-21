@@ -1,0 +1,35 @@
+{
+  "name": "@brielov/tsp",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Gabriel Vaquer <brielov@icloud.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "tinyqueue": "^2.0.3"
+  },
+  "keywords": [
+    "traveling",
+    "salesman",
+    "branch",
+    "bound",
+    "algorithm",
+    "distance",
+    "approximation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brielov/tsp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brielov/tsp/issues"
+  },
+  "homepage": "https://github.com/brielov/tsp#readme",
+  "description": "Traveling salesman problem using branch and bound algorithm"
+}
