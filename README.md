@@ -1,6 +1,6 @@
 # Traveling salesman problem
 
-This is my humble attempt of porting a C++ I [found on the internet][1] that `solves` the traveling salesman problem using the branch and bound algorithm.
+This is my humble attempt of porting a C++ algorithm I [found on the internet][1] that `solves` the traveling salesman problem using the branch and bound algorithm.
 
 ### Usage
 
