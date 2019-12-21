@@ -1,5 +1,5 @@
 import * as matrix from './matrix';
-import { Point, Matrix } from './types';
+import { Point, Matrix, Node } from './types';
 
 // Earth radius in meters;
 const R = 6371000;
@@ -40,7 +40,7 @@ function getDistanceBetweenPoints(pointA: Point, pointB: Point): number {
 /**
  * Create a two dimensional matrix containing the
  * cost between nodes
- * @param points
+ * @param {Point[]} points
  * @returns Array<Array<number>>
  */
 export function createCostMatrix(points: Point[]): Matrix {
@@ -56,4 +56,22 @@ export function createCostMatrix(points: Point[]): Matrix {
   }
 
   return costMatrix;
+}
+
+/**
+ * Return a list of sorted points based on result node
+ * @param {Point[]} points
+ * @param {Node} resultNode
+ * @returns {Point[]}
+ */
+export function getSortedPoints(points: Point[], resultNode: Node): Point[] {
+  const sortedPoints: Point[] = [];
+  const { length } = resultNode.path;
+
+  for (let i = 0; i < length; i++) {
+    const [index] = resultNode.path[i];
+    sortedPoints.push(points[index]);
+  }
+
+  return sortedPoints;
 }
