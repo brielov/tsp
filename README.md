@@ -59,6 +59,9 @@ const points: tsp.Point[] = [
   { type: 'Point', coordinates: [-79.416667, 43.666667] },
 ];
 
+const costMatrix = tsp.geolocation.createCostMatrix(points);
+const solution = tsp.solve(costMatrix);
+
 // Output:
 {
   path: [
