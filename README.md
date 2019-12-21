@@ -1,6 +1,6 @@
 # Traveling salesman problem
 
-This is my humble attempt of porting a C++ I found on the internet that `solves` the traveling salesman problem using the branch and bound algorithm.
+This is my humble attempt of porting a C++ I [found on the internet][1] that `solves` the traveling salesman problem using the branch and bound algorithm.
 
 ### Usage
 
@@ -68,6 +68,24 @@ const points: tsp.Point[] = [
     [ 2, 0 ]
   ],
   ...
-  cost: 46544831.14534618 // in meters
+  cost: 46544831.14534618 // in meters, 46.544 in kilometers
 }
 ```
+
+The first node is always the starting point, so you should put your point of departure first.
+
+So, according to the result from above, the optimal tour would be:
+
+|           From | To             |
+| -------------: | -------------- |
+|   Buenos Aires | Rio de Janeiro |
+| Rio de Janeiro | Toronto        |
+|        Toronto | Barcelona      |
+|      Barcelona | Bang Rak       |
+|       Bang Rak | Wellington     |
+|     Wellington | Chile          |
+|          Chile | Buenos Aires   |
+
+And the cost would be around 46.544 kilometers
+
+[1]: https://www.techiedelight.com/travelling-salesman-problem-using-branch-and-bound/
